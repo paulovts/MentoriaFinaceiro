@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace DesafioMentoria.Domain.Entities
+namespace MentoriaFinanceiro.Domain.Entities
 {
 
     [Table("tb_operacao", Schema = "financeiro")]

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesafioMentoria.Application.Dtos
+namespace MentoriaFinanceiro.Application.Dtos
 {
     public class ContaDto
     {

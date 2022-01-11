@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesafioMentoria.Application.Dtos
+namespace MentoriaFinanceiro.Application.Dtos
 {
     public class OperacaoDto
     {

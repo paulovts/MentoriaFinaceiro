@@ -1,8 +1,8 @@
-﻿using DesafioMentoria.Application.Dtos;
-using DesafioMentoria.Domain.Entities;
+﻿using MentoriaFinanceiro.Application.Dtos;
+using MentoriaFinanceiro.Domain.Entities;
 using System.Collections.Generic;
 
-namespace DesafioMentoria.Application.Interfaces.Mappers
+namespace MentoriaFinanceiro.Application.Interfaces.Mappers
 {
     public interface IMapperPessoa
     {

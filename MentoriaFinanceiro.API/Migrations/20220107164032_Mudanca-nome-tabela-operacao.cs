@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace DesafioMentoria.API.Migrations
+namespace MentoriaFinanceiro.API.Migrations
 {
     public partial class Mudancanometabelaoperacao : Migration
     {

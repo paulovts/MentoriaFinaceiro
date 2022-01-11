@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DesafioMentoria.Domain.Entities
+namespace MentoriaFinanceiro.Domain.Entities
 {
     [Table("tb_conta_corrente", Schema = "financeiro")]
     public class Conta

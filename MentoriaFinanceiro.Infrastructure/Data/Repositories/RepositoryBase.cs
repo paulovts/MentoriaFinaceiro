@@ -1,10 +1,10 @@
-﻿using DesafioMentoria.Domain.Core.Interfaces.Repositories;
+﻿using MentoriaFinanceiro.Domain.Core.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DesafioMentoria.Infrastructure.Data.Repositories
+namespace MentoriaFinanceiro.Infrastructure.Data.Repositories
 {
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {

@@ -1,9 +1,9 @@
-﻿using DesafioMentoria.Domain.Entities;
+﻿using MentoriaFinanceiro.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesafioMentoria.Domain.Core.Interfaces.Repositories
+namespace MentoriaFinanceiro.Domain.Core.Interfaces.Repositories
 {
     public interface IRepositoryConta : IRepositoryBase<Conta>
     {

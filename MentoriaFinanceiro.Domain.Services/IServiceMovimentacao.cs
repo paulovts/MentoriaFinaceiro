@@ -1,4 +1,4 @@
-﻿namespace DesafioMentoria.Domain.Services
+﻿namespace MentoriaFinanceiro.Domain.Services
 {
     public interface IServiceMovimentacao<TEntity> where TEntity : class
     {

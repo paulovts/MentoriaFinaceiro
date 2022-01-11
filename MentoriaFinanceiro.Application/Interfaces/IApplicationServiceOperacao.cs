@@ -1,7 +1,7 @@
-﻿using DesafioMentoria.Application.Dtos;
+﻿using MentoriaFinanceiro.Application.Dtos;
 using System.Collections.Generic;
 
-namespace DesafioMentoria.Application.Interfaces
+namespace MentoriaFinanceiro.Application.Interfaces
 {
     public interface IApplicationServiceOperacao
     {

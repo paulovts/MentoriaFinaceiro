@@ -1,8 +1,8 @@
-﻿using DesafioMentoria.Domain.Core.Interfaces.Repositories;
-using DesafioMentoria.Domain.Core.Interfaces.Services;
+﻿using MentoriaFinanceiro.Domain.Core.Interfaces.Repositories;
+using MentoriaFinanceiro.Domain.Core.Interfaces.Services;
 using System.Collections.Generic;
 
-namespace DesafioMentoria.Domain.Services
+namespace MentoriaFinanceiro.Domain.Services
 {
     public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : class
     {

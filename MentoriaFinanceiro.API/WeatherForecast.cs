@@ -1,6 +1,6 @@
 using System;
 
-namespace DesafioMentoria.API
+namespace MentoriaFinanceiro.API
 {
     public class WeatherForecast
     {

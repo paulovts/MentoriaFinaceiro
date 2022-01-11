@@ -1,6 +1,6 @@
-﻿using DesafioMentoria.Domain.Entities;
+﻿using MentoriaFinanceiro.Domain.Entities;
 
-namespace DesafioMentoria.Domain.Core.Interfaces.Repositories
+namespace MentoriaFinanceiro.Domain.Core.Interfaces.Repositories
 {
     public interface IRepositoryMovimentacao : IRepositoryBase<Movimentacao>
     {

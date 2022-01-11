@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesafioMentoria.Domain.Core.Interfaces.Services
+namespace MentoriaFinanceiro.Domain.Core.Interfaces.Services
 {
     public interface IServiceBase<TEntity> where TEntity : class
     {

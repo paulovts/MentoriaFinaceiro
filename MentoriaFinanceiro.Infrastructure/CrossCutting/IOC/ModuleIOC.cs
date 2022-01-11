@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesafioMentoria.Infrastructure.CrossCutting.IOC
+namespace MentoriaFinanceiro.Infrastructure.CrossCutting.IOC
 {
     public class ModuleIOC : Module
     {

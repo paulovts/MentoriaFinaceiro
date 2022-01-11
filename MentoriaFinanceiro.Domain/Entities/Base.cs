@@ -1,4 +1,4 @@
-﻿namespace DesafioMentoria.Domain.Entities
+﻿namespace MentoriaFinanceiro.Domain.Entities
 {
     public class Base
     {

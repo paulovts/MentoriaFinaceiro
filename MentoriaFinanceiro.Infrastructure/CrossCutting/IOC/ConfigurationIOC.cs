@@ -1,14 +1,14 @@
 ﻿using Autofac;
-using DesafioMentoria.Application;
-using DesafioMentoria.Application.Interfaces;
-using DesafioMentoria.Application.Interfaces.Mappers;
-using DesafioMentoria.Application.Mappers;
-using DesafioMentoria.Domain.Core.Interfaces.Repositories;
-using DesafioMentoria.Domain.Core.Interfaces.Services;
-using DesafioMentoria.Domain.Services;
-using DesafioMentoria.Infrastructure.Data.Repositories;
+using MentoriaFinanceiro.Application;
+using MentoriaFinanceiro.Application.Interfaces;
+using MentoriaFinanceiro.Application.Interfaces.Mappers;
+using MentoriaFinanceiro.Application.Mappers;
+using MentoriaFinanceiro.Domain.Core.Interfaces.Repositories;
+using MentoriaFinanceiro.Domain.Core.Interfaces.Services;
+using MentoriaFinanceiro.Domain.Services;
+using MentoriaFinanceiro.Infrastructure.Data.Repositories;
 
-namespace DesafioMentoria.Infrastructure.CrossCutting.IOC
+namespace MentoriaFinanceiro.Infrastructure.CrossCutting.IOC
 {
     public class ConfigurationIOC
     {

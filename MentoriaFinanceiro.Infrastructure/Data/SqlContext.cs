@@ -1,9 +1,9 @@
-﻿using DesafioMentoria.Domain.Entities;
+﻿using MentoriaFinanceiro.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 
-namespace DesafioMentoria.Infrastructure.Data
+namespace MentoriaFinanceiro.Infrastructure.Data
 {
     public class SqlContext : DbContext
     {

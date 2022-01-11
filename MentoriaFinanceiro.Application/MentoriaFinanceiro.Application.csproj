@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MentoriaFinanceiro.Domain.Services\DesafioMentoria.Domain.Services.csproj" />
-    <ProjectReference Include="..\MentoriaFinanceiro.Domain\DesafioMentoria.Domain.csproj" />
+    <ProjectReference Include="..\MentoriaFinanceiro.Domain.Services\MentoriaFinanceiro.Domain.Services.csproj" />
+    <ProjectReference Include="..\MentoriaFinanceiro.Domain\MentoriaFinanceiro.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@ using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace DesafioMentoria.API
+namespace MentoriaFinanceiro.API
 {
     public class Program
     {

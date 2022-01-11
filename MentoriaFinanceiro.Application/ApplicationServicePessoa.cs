@@ -1,10 +1,10 @@
-﻿using DesafioMentoria.Application.Dtos;
-using DesafioMentoria.Application.Interfaces;
-using DesafioMentoria.Application.Interfaces.Mappers;
-using DesafioMentoria.Domain.Core.Interfaces.Services;
+﻿using MentoriaFinanceiro.Application.Dtos;
+using MentoriaFinanceiro.Application.Interfaces;
+using MentoriaFinanceiro.Application.Interfaces.Mappers;
+using MentoriaFinanceiro.Domain.Core.Interfaces.Services;
 using System.Collections.Generic;
 
-namespace DesafioMentoria.Application
+namespace MentoriaFinanceiro.Application
 {
     public class ApplicationServicePessoa : IApplicationServicePessoa
     {

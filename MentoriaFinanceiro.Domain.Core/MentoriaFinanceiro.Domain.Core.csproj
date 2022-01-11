@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MentoriaFinanceiro.Domain\DesafioMentoria.Domain.csproj" />
+    <ProjectReference Include="..\MentoriaFinanceiro.Domain\MentoriaFinanceiro.Domain.csproj" />
   </ItemGroup>
 
 </Project>

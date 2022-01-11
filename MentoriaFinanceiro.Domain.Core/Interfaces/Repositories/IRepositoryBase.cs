@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DesafioMentoria.Domain.Core.Interfaces.Repositories
+namespace MentoriaFinanceiro.Domain.Core.Interfaces.Repositories
 {
     public interface IRepositoryBase<TEntity> where TEntity : class
     {

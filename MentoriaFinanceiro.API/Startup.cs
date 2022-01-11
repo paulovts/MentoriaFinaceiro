@@ -1,6 +1,6 @@
 using Autofac;
-using DesafioMentoria.Infrastructure.CrossCutting.IOC;
-using DesafioMentoria.Infrastructure.Data;
+using MentoriaFinanceiro.Infrastructure.CrossCutting.IOC;
+using MentoriaFinanceiro.Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace DesafioMentoria.API
+namespace MentoriaFinanceiro.API
 {
     public class Startup
     {
@@ -25,7 +25,7 @@ namespace DesafioMentoria.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SqlContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"), b => b.MigrationsAssembly("DesafioMentoria.API")));
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"), b => b.MigrationsAssembly("MentoriaFinanceiro.API")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSwaggerGen( c =>{
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Projeto Mentoria", Version = "v1" });
