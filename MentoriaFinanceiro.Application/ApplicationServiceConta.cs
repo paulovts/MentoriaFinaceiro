@@ -2,6 +2,8 @@
 using MentoriaFinanceiro.Application.Interfaces;
 using MentoriaFinanceiro.Application.Interfaces.Mappers;
 using MentoriaFinanceiro.Application.Interfaces.Mappers;
+using MentoriaFinanceiro.Domain.BO;
+
 using MentoriaFinanceiro.Domain.Core.Interfaces.Services;
 using System.Collections.Generic;
 
@@ -11,6 +13,7 @@ namespace MentoriaFinanceiro.Application
     {
         private readonly IServiceConta serviceConta;
         private readonly IMapperConta mapperConta;
+        private readonly ContaBO contaBO = new ContaBO();
 
         public ApplicationServiceConta (IServiceConta serviceConta, IMapperConta mapperConta)
         {
@@ -21,7 +24,8 @@ namespace MentoriaFinanceiro.Application
         public void Add(ContaDto contaDto)
         {
            var conta = mapperConta.MapperDtoToEntity(contaDto);
-           serviceConta.Add(conta);
+            contaBO.ValidarInsercaoConta(conta);
+            serviceConta.Add(conta);
         }
         public IEnumerable<ContaDto> GetAll()
         {

@@ -22,7 +22,7 @@ namespace MentoriaFinanceiro.Application
         {
             var pessoa = mapperPessoa.MapperDtoToEntity(pessoaDto);
 
-            pessoaBO.ValidarInsercao(pessoa);
+            pessoaBO.ValidarInsercaoPessoa(pessoa);
             servicePessoa.Add(pessoa);
         }
 

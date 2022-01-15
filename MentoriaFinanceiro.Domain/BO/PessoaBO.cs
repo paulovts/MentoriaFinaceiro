@@ -7,7 +7,7 @@ namespace MentoriaFinanceiro.Domain.BO
 {
     public class PessoaBO
     {
-        public void ValidarInsercao(Pessoa pessoaDto)
+        public void ValidarInsercaoPessoa(Pessoa pessoaDto)
         {
             if (pessoaDto == null)
             {

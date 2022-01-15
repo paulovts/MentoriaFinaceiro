@@ -40,6 +40,10 @@ namespace MentoriaFinanceiro.API.Controllers
                 _applicationServiceConta.Add(contaDto);
                 return Ok("Cadastro de conta realizado com sucesso!");
             }
+            catch (FormatException ex)
+            {
+                return BadRequest(ex.Message);
+            }
             catch (Exception ex)
             {
                 throw ex;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MentoriaFinanceiro.Domain.BO
 {
-    internal class MovimentacaoBO
+    public class MovimentacaoBO
     {
     }
 }
