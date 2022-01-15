@@ -38,7 +38,12 @@ namespace MentoriaFinanceiro.API.Controllers
                     return NotFound();
                 _applicationServicePessoa.Add(pessoaDto);
                 return Ok("Cadastro de pessoa realizado com sucesso!");
-            }catch (Exception ex)
+            }
+            catch (FormatException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }

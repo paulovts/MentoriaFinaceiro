@@ -2,6 +2,7 @@
 using MentoriaFinanceiro.Application.Interfaces;
 using MentoriaFinanceiro.Application.Interfaces.Mappers;
 using MentoriaFinanceiro.Domain.Core.Interfaces.Services;
+using MentoriaFinanceiro.Domain.BO;
 using System.Collections.Generic;
 
 namespace MentoriaFinanceiro.Application
@@ -10,6 +11,7 @@ namespace MentoriaFinanceiro.Application
     {
         private readonly IServicePessoa servicePessoa;
         private readonly IMapperPessoa mapperPessoa;
+        private readonly PessoaBO pessoaBO = new PessoaBO();
 
         public ApplicationServicePessoa(IServicePessoa servicePessoa, IMapperPessoa mapperPessoa)
         {
@@ -19,6 +21,8 @@ namespace MentoriaFinanceiro.Application
         public void Add(PessoaDto pessoaDto)
         {
             var pessoa = mapperPessoa.MapperDtoToEntity(pessoaDto);
+
+            pessoaBO.ValidarInsercao(pessoa);
             servicePessoa.Add(pessoa);
         }
 
