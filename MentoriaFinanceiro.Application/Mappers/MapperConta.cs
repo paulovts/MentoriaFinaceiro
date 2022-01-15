@@ -16,7 +16,7 @@ namespace MentoriaFinanceiro.Application.Mappers
                PessoaId = contaDto.PessoaId,
                Agencia = contaDto.Agencia,
                ContaCorrente = contaDto.ContaCorrente,
-               DataAbertura = new System.DateTime.Now(),
+               DataAbertura = contaDto.DataAbertura,
                ValorAbertura = contaDto.ValorAbertura,
                ValorSaldoAtual = contaDto.ValorSaldoAtual,
                DataUltimaMovimentacao = contaDto.DataUltimaMovimentacao,
