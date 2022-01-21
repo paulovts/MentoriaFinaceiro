@@ -112,49 +112,5 @@ namespace MentoriaFinanceiro.Application
 
             applicationServiceConta.debitarSaldoConta(conta, valor);
         }
-
-
-        //    public void Transferencia(int contaID, decimal valor, string agenciaDestino, string contaDestino, string descricao = "pagamento")
-        //    {
-
-        //        var contaOrigem = serviceConta.GetById(contaID);
-        //        ContaRN.verificaSaldoConta(contaOrigem, valor);
-
-        //        var contaDestinatario = serviceConta.GetConta(agenciaDestino, contaDestino);
-        //        ContaRN.verificaDeposito(contaDestinatario);
-
-        //        var realizarPagamento = new Movimentacao
-        //        {
-        //            Id = 0,
-        //            Conta = contaOrigem,
-        //            ContaId = contaID,
-        //            DataMovimentacao = DateTime.Now,
-        //            DescricaoMovimentacao = " Tranferencia efetuada para agencia: " + contaDestinatario.Agencia + " Conta Corrente: " + contaDestinatario.ContaCorrente + " Descrição: " + descricao,
-        //            OperacaoId = TRANSFERECIA_D,
-        //            Operacao = serviceOperacao.GetById(TRANSFERECIA_D),
-        //            ValorMovimentacao = valor
-        //        };
-
-        //        MovimentacaoRN.validadarMovimentacao(realizarPagamento);
-
-
-        //        var realizarDeposito = new Movimentacao
-        //        {
-        //            Id = 0,
-        //            Conta = contaDestinatario,
-        //            ContaId = contaDestinatario.Id,
-        //            DataMovimentacao = DateTime.Now,
-        //            DescricaoMovimentacao = "Transferencia recebida da agencia:  " + contaOrigem.Agencia + " Conta Corrente: " + contaOrigem.ContaCorrente + " Descrição:" + descricao,
-        //            OperacaoId = TRANSFERECIA_C,
-        //            Operacao = serviceOperacao.GetById(TRANSFERECIA_C),
-        //            ValorMovimentacao = valor
-        //        };
-
-        //        serviceMovimentacao.Add(realizarPagamento);
-        //        serviceMovimentacao.Add(realizarDeposito);
-
-        //        applicationServiceConta.debitarSaldoConta(contaOrigem, valor);
-        //        applicationServiceConta.depositarSaldoConta(contaDestinatario, valor);
-        //    }
     }
 }

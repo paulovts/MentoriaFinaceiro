@@ -24,11 +24,11 @@ namespace MentoriaFinanceiro.Infrastructure.Data.Repositories
                         .Where<Movimentacao>(m => m.DataMovimentacao <= dataInicio)
                         join oper in sqlContext.Set<Operacao>() on movimentacao.OperacaoId equals oper.Id
                         select new { movimentacao, oper };
-            var saldoAnterior = query.Where(prop => prop.oper.TipoMovimentacao == 'C').Sum(prop => prop.movimentacao.ValorMovimentacao) -
+            var saldo = query.Where(prop => prop.oper.TipoMovimentacao == 'C').Sum(prop => prop.movimentacao.ValorMovimentacao) -
                  query.Where(prop => prop.oper.TipoMovimentacao == 'D').Sum(prop => prop.movimentacao.ValorMovimentacao);
 
 
-            return saldoAnterior;
+            return saldo;
 
         }
 
@@ -39,11 +39,11 @@ namespace MentoriaFinanceiro.Infrastructure.Data.Repositories
                         .Where<Movimentacao>(m => m.DataMovimentacao <= dataFim)
                         join oper in sqlContext.Set<Operacao>() on movimentacao.OperacaoId equals oper.Id
                         select new { movimentacao, oper };
-            var saldoAnterior = query.Where(prop => prop.oper.TipoMovimentacao == 'C').Sum(prop => prop.movimentacao.ValorMovimentacao) -
+            var saldo = query.Where(prop => prop.oper.TipoMovimentacao == 'C').Sum(prop => prop.movimentacao.ValorMovimentacao) -
                  query.Where(prop => prop.oper.TipoMovimentacao == 'D').Sum(prop => prop.movimentacao.ValorMovimentacao);
 
 
-            return saldoAnterior;
+            return saldo;
 
         }
 
