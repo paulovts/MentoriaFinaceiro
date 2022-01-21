@@ -88,31 +88,30 @@ namespace MentoriaFinanceiro.Application
             applicationServiceConta.depositarSaldoConta(conta, valor);
         }
 
-        //    public void Pagamento(int contaID, decimal valor, string descricao = "pagamento")
-        //    {
-        //        var conta = serviceConta.GetById(contaID);
+        public void RealizarPagamento(int contaID, decimal valor, string descricao = "pagamento")
+        {
+            var conta = serviceConta.GetById(contaID);
 
-        //        ContaRN.verificaSaldoConta(conta, valor);
+        
+            var realizarPagamento = new Movimentacao
+            {
+                Id = 0,
+                Conta = conta,
+                ContaId = contaID,
+                DataMovimentacao = DateTime.Now,
+                DescricaoMovimentacao = descricao,
+                OperacaoId = PAGAMENTO,
+                Operacao = serviceOperacao.GetById(PAGAMENTO),
+                ValorMovimentacao = valor
+            };
 
-        //        var realizarPagamento = new Movimentacao
-        //        {
-        //            Id = 0,
-        //            Conta = conta,
-        //            ContaId = contaID,
-        //            DataMovimentacao = DateTime.Now,
-        //            DescricaoMovimentacao = descricao,
-        //            OperacaoId = PAGAMENTO,
-        //            Operacao = serviceOperacao.GetById(PAGAMENTO),
-        //            ValorMovimentacao = valor
-        //        };
-
-        //        MovimentacaoRN.validadarMovimentacao(realizarPagamento);
+            MovimentacaoBO.ValidarInsercaoMovimentacao(realizarPagamento);
 
 
-        //        serviceMovimentacao.Add(realizarPagamento);
+            serviceMovimentacao.Add(realizarPagamento);
 
-        //        applicationServiceConta.debitarSaldoConta(conta, valor);
-        //    }
+            applicationServiceConta.debitarSaldoConta(conta, valor);
+        }
 
 
         //    public void Transferencia(int contaID, decimal valor, string agenciaDestino, string contaDestino, string descricao = "pagamento")

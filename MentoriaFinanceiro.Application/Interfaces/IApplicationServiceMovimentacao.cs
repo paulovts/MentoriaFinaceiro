@@ -12,5 +12,6 @@ namespace MentoriaFinanceiro.Application.Interfaces
         MovimentacaoDto GetById(int id);
 
         void Depositar(int contaID, decimal valor, string descricao);
+        void RealizarPagamento(int contaID, decimal valor, string descricao);
     }
 }

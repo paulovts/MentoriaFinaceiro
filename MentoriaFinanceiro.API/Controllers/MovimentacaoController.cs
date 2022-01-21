@@ -94,5 +94,21 @@ namespace MentoriaFinanceiro.API.Controllers
             }
         }
 
+        [HttpPost("Pagamento, {contaID}, {valor}")]
+        [ActionName("Pagamento")]
+        public ActionResult Pagamento(int contaID, decimal valor, string descricao)
+        {
+            try
+            {
+                _applicationServiceMovimentacao.RealizarPagamento(contaID, valor, descricao);
+                return Ok("Pagamento Realizado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+                //return NotFound(ex.Message);
+            }
+        }
+
     }
 }
