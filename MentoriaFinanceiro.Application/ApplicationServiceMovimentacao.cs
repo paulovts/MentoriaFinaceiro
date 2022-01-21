@@ -11,8 +11,8 @@ namespace MentoriaFinanceiro.Application
 
         public const int DEPOSITO = 1;
         public const int TRANSFERECIA_C = 2;
-        public const int TRANSFERECIA_D = 3;
-        public const int PAGAMENTO = 4;
+        public const int TRANSFERECIA_D = 4;
+        public const int PAGAMENTO = 5;
 
 
         private readonly IServiceMovimentacao serviceMovimentacao;
