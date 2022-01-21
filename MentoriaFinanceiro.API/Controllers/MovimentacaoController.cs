@@ -77,5 +77,22 @@ namespace MentoriaFinanceiro.API.Controllers
                 throw ex;
             }
         }
+
+        [HttpPost("Deposito, {contaID}, {valor}")]
+        [ActionName("Deposito")]
+        public ActionResult Deposito(int contaID, decimal valor, string descricao)
+        {
+            try
+            {
+                _applicationServiceMovimentacao.Depositar(contaID, valor, descricao);
+                return Ok("Deposito Realizado com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+                //return NotFound(ex.Message);
+            }
+        }
+
     }
 }

@@ -7,7 +7,7 @@ namespace MentoriaFinanceiro.Domain.BO
 {
     public class MovimentacaoBO
     {
-        public void ValidarInsercaoMovimentacao(Movimentacao movimentacao)
+        public static void ValidarInsercaoMovimentacao(Movimentacao movimentacao)
         {
             if (movimentacao == null)
             {

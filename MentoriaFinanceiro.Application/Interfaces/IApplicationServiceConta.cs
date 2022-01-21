@@ -13,6 +13,9 @@ namespace MentoriaFinanceiro.Application.Interfaces
         void Update(ContaDto contaDto);
         IEnumerable<ContaDto> GetAll();
         ContaDto GetById(int id);
+        void depositarSaldoConta(Conta conta, decimal valor);
+
+        void debitarSaldoConta(Conta conta, decimal valor);
 
         ExtratoBancario Extrato(string agencia, string conta, DateTime dataInicio, DateTime dataFim);
     }

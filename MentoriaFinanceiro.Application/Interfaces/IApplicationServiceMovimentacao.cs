@@ -10,5 +10,7 @@ namespace MentoriaFinanceiro.Application.Interfaces
         void Update(MovimentacaoDto movimentacaoDto);
         IEnumerable<MovimentacaoDto> GetAll();
         MovimentacaoDto GetById(int id);
+
+        void Depositar(int contaID, decimal valor, string descricao);
     }
 }

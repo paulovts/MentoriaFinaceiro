@@ -19,13 +19,13 @@ namespace MentoriaFinanceiro.Infrastructure.Data.Repositories
         }
         public decimal SaldoAnterior(int contaID, DateTime dataInicio)
         {
-            var query = from mov in sqlContext.Set<Movimentacao>()
+            var query = from movimentacao in sqlContext.Set<Movimentacao>()
                         .Where<Movimentacao>(m => m.ContaId == contaID)
                         .Where<Movimentacao>(m => m.DataMovimentacao <= dataInicio)
-                        join oper in sqlContext.Set<Operacao>() on mov.OperacaoId equals oper.Id
-                        select new { mov, oper };
-            var saldoAnterior = query.Where(prop => prop.oper.TipoMovimentacao == 'C').Sum(prop => prop.mov.ValorMovimentacao) -
-                 query.Where(prop => prop.oper.TipoMovimentacao == 'D').Sum(prop => prop.mov.ValorMovimentacao);
+                        join oper in sqlContext.Set<Operacao>() on movimentacao.OperacaoId equals oper.Id
+                        select new { movimentacao, oper };
+            var saldoAnterior = query.Where(prop => prop.oper.TipoMovimentacao == 'C').Sum(prop => prop.movimentacao.ValorMovimentacao) -
+                 query.Where(prop => prop.oper.TipoMovimentacao == 'D').Sum(prop => prop.movimentacao.ValorMovimentacao);
 
 
             return saldoAnterior;
@@ -34,13 +34,13 @@ namespace MentoriaFinanceiro.Infrastructure.Data.Repositories
 
         public decimal SaldoPeriodo(int contaID, DateTime dataFim)
         {
-            var query = from mov in sqlContext.Set<Movimentacao>()
+            var query = from movimentacao in sqlContext.Set<Movimentacao>()
                         .Where<Movimentacao>(m => m.ContaId == contaID)
                         .Where<Movimentacao>(m => m.DataMovimentacao <= dataFim)
-                        join oper in sqlContext.Set<Operacao>() on mov.OperacaoId equals oper.Id
-                        select new { mov, oper };
-            var saldoAnterior = query.Where(prop => prop.oper.TipoMovimentacao == 'C').Sum(prop => prop.mov.ValorMovimentacao) -
-                 query.Where(prop => prop.oper.TipoMovimentacao == 'D').Sum(prop => prop.mov.ValorMovimentacao);
+                        join oper in sqlContext.Set<Operacao>() on movimentacao.OperacaoId equals oper.Id
+                        select new { movimentacao, oper };
+            var saldoAnterior = query.Where(prop => prop.oper.TipoMovimentacao == 'C').Sum(prop => prop.movimentacao.ValorMovimentacao) -
+                 query.Where(prop => prop.oper.TipoMovimentacao == 'D').Sum(prop => prop.movimentacao.ValorMovimentacao);
 
 
             return saldoAnterior;
@@ -49,17 +49,17 @@ namespace MentoriaFinanceiro.Infrastructure.Data.Repositories
 
         public List<ExtratoMovimentacao> GetMovimentacao(int contaID, DateTime dataInicio, DateTime dataFim)
         {
-            var query = from mov in sqlContext.Set<Movimentacao>()
+            var query = from movimentacao in sqlContext.Set<Movimentacao>()
                         .Where<Movimentacao>(m => m.ContaId == contaID)
                             .Where<Movimentacao>(m => m.DataMovimentacao >= dataInicio)
                             .Where<Movimentacao>(m => m.DataMovimentacao <= dataFim)
-                        join oper in sqlContext.Set<Operacao>() on mov.OperacaoId equals oper.Id
+                        join oper in sqlContext.Set<Operacao>() on movimentacao.OperacaoId equals oper.Id
                         select new ExtratoMovimentacao
                         {
-                            ContaId = mov.ContaId,
-                            DataMovimentacao = mov.DataMovimentacao,
-                            DescricaoMovimentacao = mov.DescricaoMovimentacao,
-                            ValorMovimentacao = mov.ValorMovimentacao,
+                            ContaId = movimentacao.ContaId,
+                            DataMovimentacao = movimentacao.DataMovimentacao,
+                            DescricaoMovimentacao = movimentacao.DescricaoMovimentacao,
+                            ValorMovimentacao = movimentacao.ValorMovimentacao,
                             TipoMovimentacao = oper.TipoMovimentacao,
                             NomeOperacao = oper.NomeOperacao
                         };

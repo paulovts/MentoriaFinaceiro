@@ -28,7 +28,7 @@ namespace MentoriaFinanceiro.API
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"), b => b.MigrationsAssembly("MentoriaFinanceiro.API")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSwaggerGen( c =>{
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Projeto Mentoria", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Projeto Mentoria Paulo Victor", Version = "v1" });
             });
             services.AddControllers();
         }
