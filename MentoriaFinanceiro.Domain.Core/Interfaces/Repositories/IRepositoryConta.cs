@@ -7,5 +7,7 @@ namespace MentoriaFinanceiro.Domain.Core.Interfaces.Repositories
 {
     public interface IRepositoryConta : IRepositoryBase<Conta>
     {
+        int IsPessoaTemConta(int pessoaID);
+        Conta GetConta(string agencia, string conta);
     }
 }

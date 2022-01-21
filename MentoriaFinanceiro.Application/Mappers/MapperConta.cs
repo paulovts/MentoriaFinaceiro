@@ -3,6 +3,7 @@ using MentoriaFinanceiro.Application.Interfaces.Mappers;
 using MentoriaFinanceiro.Domain.Entities;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace MentoriaFinanceiro.Application.Mappers
 {
@@ -16,10 +17,10 @@ namespace MentoriaFinanceiro.Application.Mappers
                PessoaId = contaDto.PessoaId,
                Agencia = contaDto.Agencia,
                ContaCorrente = contaDto.ContaCorrente,
-               DataAbertura = contaDto.DataAbertura,
+               DataAbertura = DateTime.Now,
                ValorAbertura = contaDto.ValorAbertura,
                ValorSaldoAtual = contaDto.ValorSaldoAtual,
-               DataUltimaMovimentacao = contaDto.DataUltimaMovimentacao,
+               DataUltimaMovimentacao = DateTime.Now,
                Ativo = contaDto.Ativo 
            };
            return conta;

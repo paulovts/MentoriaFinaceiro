@@ -12,5 +12,15 @@ namespace MentoriaFinanceiro.Domain.Services
         {
             this.repositoryConta = repositoryConta;
         }
+
+        public int IsPessoaTemConta(int pessoaID)
+        {
+            return this.repositoryConta.IsPessoaTemConta(pessoaID);
+        }
+
+        public Conta GetConta(string agencia, string conta)
+        {
+            return this.repositoryConta.GetConta(agencia, conta);
+        }
     }
 }

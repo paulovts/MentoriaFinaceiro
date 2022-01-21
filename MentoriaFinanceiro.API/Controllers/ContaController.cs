@@ -31,16 +31,15 @@ namespace MentoriaFinanceiro.API.Controllers
         }
 
         [HttpPost]
+        [ActionName("CadastrarConta")]
         public ActionResult Post([FromBody] ContaDto contaDto)
         {
             try
             {
-                if (contaDto == null)
-                    return NotFound();
                 _applicationServiceConta.Add(contaDto);
                 return Ok("Cadastro de conta realizado com sucesso!");
             }
-            catch (FormatException ex)
+             catch (FormatException ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -49,6 +48,7 @@ namespace MentoriaFinanceiro.API.Controllers
                 throw ex;
             }
         }
+
 
         [HttpPut]
         public ActionResult Put([FromBody] ContaDto contaDto)
@@ -79,6 +79,21 @@ namespace MentoriaFinanceiro.API.Controllers
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        [HttpGet("Extrato, {agencia}, {conta}, {dataInicio}, {dataFim}")]
+        [ActionName("ExtratoBancario")]
+        public ActionResult Extrato(string agencia, string conta, DateTime dataInicio, DateTime dataFim)
+        {
+            try
+            {
+                var resultado = _applicationServiceConta.Extrato(agencia, conta, dataInicio, dataFim);
+                return Ok(resultado);
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
             }
         }
 
